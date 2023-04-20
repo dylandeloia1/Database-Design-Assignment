@@ -1,0 +1,3 @@
+For users to create multiple playlists (migrating my schema to v2), I would remove the ‘user_id’ foreign key constraint from the playlists table and instead create a new table named User_Playlists that maps users to playlists.
+
+For the account type feature in v2, I would add a column to the users table called ‘account_type’ and add a foreign key constraint to a new table called ‘Accounts’. The accounts table would have a different ‘account_type’ and ‘account_description’ for each type of account. the ‘account_type’ column in the User table would then map to the ‘account_type’ in the accounts table.
